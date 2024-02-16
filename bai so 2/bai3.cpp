@@ -20,20 +20,30 @@ class Tamgiac {
 		Point p1, p2, p3;
 	public:
 		void inputpoint() {
-			cout << "Nhap toa do diem thu nhat: " << endl;
-			p1.input();
-			cout << "Nhap toa do diem thu hai: " << endl;
-			p2.input();
-			cout << "Nhap toa do diem thu ba: " << endl;
-			p3.input();
+//			cout << "Nhap toa do diem thu nhat: " << endl;
+//			p1.input();
+//			cout << "Nhap toa do diem thu hai: " << endl;
+//			p2.input();
+//			cout << "Nhap toa do diem thu ba: " << endl;
+//			p3.input();
+			Point *points[] = {&p1, &p2, &p3};
+        	for (int i = 0; i < 3; ++i) {
+            	cout << "Nhap toa do diem thu " << i + 1 << " la: " << endl;
+            	points[i]->input();
+        	}
 		}
 		void displaypoint() {
-			cout << "Toa do diem thu nhat la: ";
-			p1.display();
-			cout << "\nToa do diem thu hai la: ";
-			p2.display();
-			cout << "\nToa do diem thu ba la: ";
-			p3.display();
+//			cout << "Toa do diem thu nhat la: ";
+//			p1.display();
+//			cout << "\nToa do diem thu hai la: ";
+//			p2.display();
+//			cout << "\nToa do diem thu ba la: ";
+//			p3.display();
+			Point *points[] = {&p1, &p2, &p3};
+			for (int i = 0; i < 3; ++i) {
+            	cout << "Toa do diem thu " << i + 1 << " la: " << endl;
+            	points[i]->display();
+        	}
 		}
 		float khoangcach(Point d1, Point d2) {
 			return sqrt(pow((d1.x - d2.x), 2) + pow((d1.y - d2.y), 2));

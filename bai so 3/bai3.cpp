@@ -41,7 +41,7 @@ int main() {
 				}
 			}
 			cout << "vector sau khi sap xep theo thu tu tang dan la: " << endl;
-			for (std::vector <int>:: const_iterator i=myvector.begin(); i!=myvector.end(); ++i) {
+			for (vector <int>::iterator i=myvector.begin(); i!=myvector.end(); ++i) {
 				cout << *i << " ";
 			}
 		} else {
